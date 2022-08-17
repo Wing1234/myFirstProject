@@ -1,0 +1,70 @@
+<!--
+ * @Author: error: git config user.name && git config user.email & please set dead value or install git
+ * @Date: 2022-06-21 08:43:31
+ * @LastEditors: error: git config user.name && git config user.email & please set dead value or install git
+ * @LastEditTime: 2022-06-21 11:23:05
+ * @FilePath: \20220621课堂练习\index2.html
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/animate.min.css">
+    <style>
+        .box,.box1{
+            width: 600px;
+            height: 100px;
+            background-color: rgb(69, 69, 198);
+            margin-top: 10px;
+        }
+
+        .box2{
+            width: 600px;
+            height: 100px;
+            background-color: rgb(69, 69, 198);
+            margin-top: 10px;
+            animation-iteration-count: infinite !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="box animate__animated"></div>
+    <button>点击触发动画</button>
+    <div class="box1 animate__animated"></div>
+    <div class="box1 animate__animated"></div>
+    <input type="button" value="按钮">
+    <div class="box2 animate__animated animate__rotateOut"></div>
+</body>
+<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+<script>
+    {
+        let flag = true;
+    $("button").click(function(){
+        if(flag){
+            $(".box").addClass("animate__backInLeft")
+        }else{
+            $(".box").addClass("animate__bounceOutRight")
+        }
+        flag = !flag;
+    })
+    }
+
+{
+    let flag = true;
+    $("input").click(function(){
+        if(flag){
+            $(".box1").addClass("animate__swing")
+        }else{
+            $(".box1").addClass("animate__hinge")
+        }
+        flag = !flag;
+    })
+}
+
+
+</script>
+</html>

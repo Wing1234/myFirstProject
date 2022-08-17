@@ -1,0 +1,63 @@
+<!--
+ * @Author: error: git config user.name && git config user.email & please set dead value or install git
+ * @Date: 2022-06-21 08:43:31
+ * @LastEditors: error: git config user.name && git config user.email & please set dead value or install git
+ * @LastEditTime: 2022-06-21 12:14:43
+ * @FilePath: \20220621课堂练习\index3.html
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/animate.min.css">
+    <style>
+
+        .box{
+            overflow: hidden;
+            text-align: center;
+        }
+
+        div.rightContent{
+            display: inline-block;
+            margin-top: 2000px;
+            transform: translateX(2000px);
+            vertical-align: top;
+        }
+
+        div.leftContent{
+            display: inline-block;
+            margin-top: 2000px;
+            transform: translateX(-1000px);
+        }
+    </style>
+  </head>
+  <body>
+   <div class="box">
+    <div class="leftContent animate__animated">
+        <img width="300px" src="img/index.webp" alt="" />
+      </div>
+      <div class="rightContent animate__animated">
+        <h1>什么是轻伤二级？评定标准来了</h1>
+        <p>
+          20日，唐山烧烤店打人案被害人王某某、刘某某损伤程度被鉴定为轻伤(二级)。据悉，“轻伤”指使人肢体、容貌损害或其他对人身健康有中度伤害的损伤
+        </p>
+      </div>
+   </div>
+  </body>
+  <script src="js/jquery-1.12.4.js"></script>
+  <script>
+    $(window).scroll(function(){
+
+        let sT = $(window).scrollTop();
+        
+        if(sT>=551){
+            $("div.leftContent").addClass("animate__backInLeft");
+            $("div.rightContent").addClass("animate__backInRight");    
+        }
+    })
+  </script>
+</html>
